@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>보물찾기 당첨 결과</title>
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: #4CAF50; }
+    p { font-size: 20px; }
+    button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>🎉 보물찾기 결과 확인 🎉</h1>
+  <p id="result">당첨 결과를 확인해보세요!</p>
+  <button onclick="checkResult()">결과 확인</button>
+
+  <script>
+    function checkResult() {
+      const results = ['🥇 1등 당첨! 신라호텔 식사권 🎁', '🥈 2등 당첨! 아웃백 식사권 🎁', '🥉 3등 당첨! 애슐리 식사권 🎁'];
+      const randomIndex = Math.floor(Math.random() * results.length);
+      document.getElementById('result').innerText = results[randomIndex];
+    }
+  </script>
+</body>
+</html>
